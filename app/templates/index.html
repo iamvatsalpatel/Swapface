@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Face Swap App</title>
+
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="./static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./static/css/menu.css" rel="stylesheet">
+    <link href="./static/css/style.css" rel="stylesheet">
+    <link href="./static/css/vendors.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="./static/css/custom.css" rel="stylesheet">
+
+    <!-- MODERNIZR MENU -->
+    <script src="./static/js/modernizr.js"></script>
+
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div data-loader="circle-side"></div>
+    </div>
+    <!-- /Preload -->
+
+    <div id="loader_form">
+        <div data-loader="circle-side-2"></div>
+    </div>
+    <!-- /loader_form -->
+
+
+    <!-- /menu -->
+
+    <div class="container-fluid">
+        <div class="row row-height">
+            <div class="col-xl-4 col-lg-4 content-left">
+                <div class="content-left-wrapper">
+                    <a href="#" id="logo"><img src="./static/images/logo.png" alt="" width="135" height="45"></a>
+                    <div id="social">
+                        <ul>
+                            <li><a href="https://github.com/iamvatsalpatel"><i class="icon-github"></i></a></li>
+                            <li><a href="https://twitter.com/iampatelvatsal"><i class="icon-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/vatsal-patel-6448741a1/"><i class="icon-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /social -->
+                    <div>
+                        <figure><img src="./static/images/2.gif" alt="" class="img-fluid" width="400" height="400"></figure>
+                        <h2>Swap Faces Here!</h2>
+                        <p>Made with ♥️ by Vatsal Patel</p>
+
+                    </div>
+                    <div class="copy">© 2021 Vatsal Patel.</div>
+                </div>
+                <!-- /content-left-wrapper -->
+            </div>
+            <!-- /content-left -->
+            <div class="col-xl-8 col-lg-8 content-right" id="start">
+                <div class="container">
+                    <div class="row">
+                        <form action='/' method="post" class="col s12" enctype="multipart/form-data">
+                            <div class="row" style="margin-top:5rem">
+
+                                <div class="input-field col s4">
+                                    <div>
+                                        <img src="{{ url_for('static',filename=source) }}" width="300" height="300">
+                                    </div>
+                                    <div class="row">
+                                        <label for="first_name"><b>Upload Source Image</b></label><br>
+                                        <div class="file-field input-field">
+                                            <div class="btn" style="background-color: #292929">
+                                                <span>Browse</span>
+                                                <input class="btn" type="file" name="source_image" id="source_image" />
+                                            </div>
+                                            <!-- <div class="file-path-wrapper">
+                                                <input class="file-path validate" type="text" placeholder="Upload Image" name="source_name" id="source_name" />
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-field col s4" style="margin-left: 20px">
+                                    <div>
+                                        <img src="{{ url_for('static',filename=destination) }}" width="300" height="300">
+                                    </div>
+                                    <div class="row">
+                                        <label for="first_name"><b>Upload Destination Image</b></label><br>
+                                        <div class="file-field input-field">
+                                            <div class="btn" style="background-color: #292929">
+                                                <span>Browse</span>
+                                                <input type="file" name="destination_image" id="destination_image" />
+                                            </div>
+                                            <!-- <div class="file-path-wrapper">
+                                                <input class="file-path validate" type="text" placeholder="Upload Image" name="destination_name" id="destination_name" />
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row op" style="margin: 5rem 15rem; margin-top:0rem;">
+                                <div class="input-field col s3" style="margin-left: 20px;">
+                                    <div class="row center" style="margin-left:80px">
+                                        <button id="submit" type="submit" class="btn op2" style="background-color: #292929; color:#fff; margin: 2.5rem;">SWAP</button>
+                                    </div>
+                                    <div>
+                                        <img src="{{ url_for('static',filename=result) }}" width="300" height="300">
+                                    </div>
+
+                                </div>
+                            </div>
+                    </div>
+
+                    </form>
+
+                </div>
+                <!-- /Wizard container -->
+            </div>
+            <!-- /content-right-->
+        </div>
+        <!-- /row-->
+    </div>
+    <!-- /container-fluid -->
+
+
+    <!-- /menu button -->
+
+    <!-- Modal terms -->
+    <!-- /.modal -->
+
+    <!-- COMMON SCRIPTS -->
+    <script src="./static/js/jquery-3.6.0.min.js"></script>
+    <script src="./static/js/common_scripts.min.js"></script>
+    <script src="./static/js/velocity.min.js"></script>
+    <script src="./static/js/common_functions.js"></script>
+    <script src="./static/js/file-validator.js"></script>
+
+    <!-- Wizard script-->
+    <script src="./static/js/func_1.js"></script>
+
+
+    <script src="./static/js/materialize.js"></script>
+    <script type="text/javascript">
+        document.getElementById('source_image').onchange = function() {
+            document.getElementById('source_name').value = this.value.slice(12, 100);
+        };
+        document.getElementById('destination_image').onchange = function() {
+            document.getElementById('destination_name').value = this.value.slice(12, 100);
+        };
+    </script>
+
+
+</body>
+
+</html>
