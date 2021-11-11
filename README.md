@@ -1,5 +1,5 @@
 # Swapface 🔄
-Swapface is a DeepFake Image Creation Web-App 🖥 where you can create DeepFake Image, Flask is used to amalgamate backend with the fronted. 
+Swapface is a DeepFake Image Creation Web-App 🖥 where you can create DeepFake Image, Flask is used to serve backend with the fronted. 
 
 <img align=right height=300 width=400 alt="swapface-logo" src="https://user-images.githubusercontent.com/61371035/141158356-8fb15b80-86d6-446d-b2d6-a643b9797d48.jpeg"/>
 
@@ -13,7 +13,7 @@ Swapface is a DeepFake Image Creation Web-App 🖥 where you can create DeepFake
 Hurry, you've successfully implemented the project.
 
 ## Video
-You can find the video demonstartion of the project from [here](https://github.com/iamvatsalpatel/Swapface/blob/main/Implementatio%20Video.mov).
+You can find the video demonstration of the project from [here](https://github.com/iamvatsalpatel/Swapface/blob/main/Implementatio%20Video.mov).
 
 ## Note
 In the 'app' folder, the sub-folder 'dat' is empty as file in it was big and I was not able to upload the file. But, you can download the file from [here](https://github.com/tzutalin/dlib-android/raw/master/data/shape_predictor_68_face_landmarks.dat) and put it in the 'dat' folder.
