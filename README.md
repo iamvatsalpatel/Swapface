@@ -1,5 +1,5 @@
 # Swapface 🔄
-Swapface is a DeepFake Image Creation Web-App 🖥 where you can create DeepFake Image, Flask is used to serve backend with the fronted. 
+Swapface is a DeepFake Image Creation Web-App 🖥 where you can create DeepFake Image, Flask is used to serve backend with the frontend. 
 
 <img align=right height=300 width=400 alt="swapface-logo" src="https://user-images.githubusercontent.com/61371035/141158356-8fb15b80-86d6-446d-b2d6-a643b9797d48.jpeg"/>
 
